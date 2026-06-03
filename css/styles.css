@@ -116,23 +116,44 @@ header{
 /* =========================
    NAVIGATION
 ========================= */
-
-nav{
-    display:flex;
-    gap:30px;
+.menu-toggle{
+    cursor:pointer;
+    font-size:2rem;
+    display:block;
+    color:white;
 }
 
-nav a{
+.nav-menu{
+    display:none;
+    position:centre;
+    top:70px;
+    right:20px;
+    background:#03020d;
+    padding:20px;
+    border-radius:10px;
+}
+
+.nav-menu.active{
+    display:block;
+}
+
+.nav-menu ul{
+    list-style:none;
+}
+
+.nav-menu li{
+    margin:10px 0;
+}
+
+.nav-menu a{
     color:white;
     text-decoration:none;
-    font-size:18px;
-
-    transition:0.3s;
 }
 
-nav a:hover{
-    color:#010a14;
+section{
+    padding:10px 20px;
 }
+
 
 /* =========================
    HAMBURGER
@@ -502,21 +523,6 @@ section.badge{
   }
 
 }
-
-/* Card container */
-.card {
-    width: 100%;
-    max-width: 600px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 100px;
-    box-shadow: 0 4px 20px rgba(27, 3, 3, 0.1);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* centers video */
-}
-
 /* Titles top-left */
 .card h3 {
     width: 100%;
@@ -549,7 +555,7 @@ section.badge{
 
     text-align:center;
 
-    box-shadow:0 2px 12px rgba(0,0,0,0.05);
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
 
     transition:0.3s;
 }
@@ -891,11 +897,255 @@ body{
     font-size:1.15rem;
     color:#444;
 }
-.hobbies .hobby-card{
+.hobbies .card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+
+
+}
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-info {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.contact-info h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #222;
+  position: relative;
+}
+
+.contact-info .label {
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Each contact row */
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.contact-detail:last-of-type {
+  border-bottom: none;
+}
+
+/* Icon styling */
+.icon {
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+/* Text labels */
+.label {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+/* Values */
+.value {
+  font-size: 15px;
+  color: #222;
+  font-weight: 500;
+}
+
+/* Clock section */
+.clock-container {
+  margin-top: 20px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.clock-container h2 {
+  color: #0077ff;
+  margin-bottom: 5px;
+}
+
+.clock-container p {
+  margin: 3px 0;
+  color: #444;
+  font-weight: 500;
+}
+.contact-form{
     background:#fff;
-    max-width:1000px;
-    margin:30px auto;
-    padding:40px;
-    border-radius:28px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.05);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form label{
+    display:block;
+    margin:15px 0 8px;
+    font-weight:600;
+    color:#1f2937;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+}
+
+.contact-form textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+.contact-form button{
+    width:100%;
+    margin-top:20px;
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#0077ff;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.contact-form button:hover{
+    background:#005fd1;
+}
+.interest {
+    padding: 80px 8%;
+    background: #faf7f2;
+}
+
+.section-tag {
+    color: #4f6df5;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 25px;
+    width:100%;
+}
+
+.interest-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 50px 30px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.icon {
+    font-size: 50px;
+    color: #1d0c73;
+    margin-bottom: 20px;
+}
+
+.interest-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2d2d2d;
+}
+
+.interest-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .interests-grid {
+        grid-template-columns: 1fr;
+}
+.favorite-books {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.book-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.book-item:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.book-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.book-info h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.book-info p {
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.95rem;
+}
+.music-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.music-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.music-badge:hover {
+    transform: translateY(-2px);
 }

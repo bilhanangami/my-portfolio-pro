@@ -1,15 +1,9 @@
-// SELECT ELEMENTS
 
-const hamburger = document.getElementById("hamburger");
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
 
-const navMenu = document.getElementById("navMenu");
-
-// TOGGLE MENU
-
-hamburger.addEventListener("click", () => {
-
+menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
-
 });
 function updateTime() {
     let now = new Date();
@@ -38,3 +32,25 @@ window.onload = function () {
   document.querySelector(".python").style.width = "55%";
   document.querySelector(".git").style.width = "65%";
 };
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("success-message");
+    const nameInput = document.getElementById("name");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const userName = nameInput.value;
+
+        successMessage.textContent =
+            `Thank you, ${userName}! Your message has been sent successfully.`;
+
+        successMessage.style.display = "block";
+
+        form.reset();
+
+        setTimeout(() => {
+            successMessage.style.display = "none";
+        }, 5000);
+    });
+});

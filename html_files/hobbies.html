@@ -8,7 +8,7 @@
     <title>Hobbies</title>
 
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -37,23 +37,21 @@
 
         </div>
 
-        <!-- NAVIGATION -->
+        <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+        <span class="material-icons">menu</span>
+    </div>
 
-        <nav id="navMenu">
-
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-
-        </nav>
-
-        <!-- HAMBURGER -->
-
-        <div class="hamburger" id="hamburger">
-            &#9776;
-            
-        </div>
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="nav-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+        </ul>
+    </nav>
 
     </header>
 
@@ -73,28 +71,28 @@
             The passions that keep me balanced,inspired and growing beyond academics.
         </p>
     </section>
-    <section class="hobbies">
+    <section class="interest">
         
             <h3>-WHAT I LOVE</h3>
             <h3>My Interests</h3>
-            <div class="hobby-list">
-                <div class="card">
-                    <span class="material-icons">directions_walk</span>
+            <div class="interest-grid">
+                <div class="interest-card">
+                    <span class="material-icons icon">directions_walk</span>
                     <h4>Walking</h4>
                     <p>Long walks help me clear my mind and stay energised.</p>
                 </div>
-                <div class="card">
-                    <span class="material-icons">books</span>
+                <div class="interest-card">
+                    <span class="material-icons icon">books</span>
                     <h4>Reading Novels</h4>
                     <p>I love getting lost in stories of fiction and adventure.</p>
                 </div>
-                <div class="card">
-                    <span class="material-icons">music_note</span>
+                <div class="interest-card">
+                    <span class="material-icons icon">music_note</span>
                     <h4>Music</h4>
                     <p>Listening to music fuels my creativity while I code.</p>
                 </div>
-                <div class="card">
-                    <span class="material-icons">movie</span>
+                <div class="interest-card">
+                    <span class="material-icons icon">movie</span>
                     <h4>Tech Tutorials</h4>
                     <p>Always learning-YouTube is my second classroom.</p>
                 </div>
@@ -108,3 +106,54 @@
       <iframe width="560" height="315" src="<iframe width="623" height="359" src="https://www.youtube.com/embed/qz0aGYrrlhU" title="HTML Tutorial for Beginners: HTML Crash Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </section>
+<section class="favorite-books">
+    <div class="card">
+        <h3>-READING</h3>
+        <h3>Books I Recommend</h3>
+    <div class="book-item">
+        <span class="book-icon">📖</span>
+        <div class="book-info">
+            <h4>The Alchemist</h4>
+            <p>Paulo Coelho · Fiction</p>
+        </div>
+    </div>
+
+    <div class="book-item">
+        <span class="book-icon">💡</span>
+        <div class="book-info">
+            <h4>Atomic Habits</h4>
+            <p>James Clear · Self-Improvement</p>
+        </div>
+    </div>
+
+    <div class="book-item">
+        <span class="book-icon">🔥</span>
+        <div class="book-info">
+            <h4>Clean Code</h4>
+            <p>Robert C. Martin · Technology</p>
+        </div>
+    </div>
+    </div>
+</section>
+<section class="music">
+    <div class="card">
+        <h3>-MUSIC</h3>
+        <h3>What's On My Playlist</h3>
+        <p>Music keeps me focused and motivated through lon coding sessions.My go-to genres:</p>
+        <div class="music-badges">
+    <span class="music-badge">🎵 Gospel</span>
+    <span class="music-badge">🎶 R&B</span>
+    <span class="music-badge">🎸 Afrobeats</span>
+    <span class="music-badge">🎹 Instrumental</span>
+    <span class="music-badge">🎤 Worship</span>
+
+    <blockquote class="music-quote">"Music is the soundtrack to my best coding sessions."</blockquote>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>&copy; 2026 Bilha Nangami-Kirinyaga University-<a href="#contact">Contact</a></p>
+</footer>
+<script src="../js/script.js"></script>
+    </body>
+</html>
