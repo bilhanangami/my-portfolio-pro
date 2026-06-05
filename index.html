@@ -127,6 +127,11 @@
             <h3>-LIVE</h3>
             <p id="time"></p>
             <p>NAIROBI, KENYA (EAT)</p>
+            <!-- Add this below your timezone label inside the clock card -->
+<div style="margin-top:10px; font-size:0.8rem; color:#64748b;">
+  👁 <strong id="visitor-count">—</strong> visitors
+</div>
+
         </div>
     </div>
 
@@ -135,8 +140,16 @@
     <p>&copy; 2026 Bilha Nangami-Kirinyaga University-<a href="#contact">Contact</a></p>
 </footer>
 
-    <!-- JS LINK -->
-    <script src="/js/script.js"></script>
+   <!-- Firebase SDK — loaded from Google CDN, no install needed -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+<!-- Your Firebase config -->
+<script src="../js/firebase.js"></script>
+
+<!-- Your existing site script — unchanged -->
+<script src="../js/script.js"></script>
+
 
 </body>
 </html>
